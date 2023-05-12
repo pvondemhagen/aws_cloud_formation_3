@@ -25,6 +25,23 @@ Resources:
           Value: pvondemhagen
         - Key: git_modifiers
           Value: pvondemhagen
+      Tenancy: default
+      SubnetId: subnet-06ebbd4e2923f4074
+      EbsOptimized: False
+      SourceDestCheck: True
+      BlockDeviceMappings:
+        -
+          DeviceName: /dev/xvda
+          Ebs:
+            Encrypted: False
+            VolumeSize: 8
+            SnapshotId: snap-09929113cb22f4007
+            VolumeType: gp2
+            DeleteOnTermination: True
+      HibernationOptions:
+        Configured: False
+      EnclaveOptions:
+        Enabled: False
   HTTPSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
